@@ -60,7 +60,7 @@ RUN git clone https://github.com/arq5x/bedtools2.git
 RUN cd bedtools2
 RUN make
 RUN make install
-WORKDIR ${TARGET_DIR}
+
 
 ### Install htslib (for samtools)
 WORKDIR ${TARGET_DIR}
@@ -68,7 +68,7 @@ RUN git clone https://github.com/samtools/htslib.git
 RUN cd htslib
 RUN make
 RUN make install
-WORKDIR ${TARGET_DIR}
+
 
 ### Install samtool
 WORKDIR ${TARGET_DIR}
@@ -76,7 +76,7 @@ RUN git clone https://github.com/samtools/samtools.git
 RUN cd samtools
 RUN make
 RUN make install
-WORKDIR ${TARGET_DIR}
+
 
 ### Download workflow scripts 
 WORKDIR ${WORKFLOW_DIR}
